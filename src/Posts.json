@@ -1,0 +1,97 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "author": {
+        "githubUser": "WandersonFeitosa",
+        "name": "Wanderson Feitosa",
+        "role": "Web Developer"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "Fala galeraa 👋"
+        },
+        {
+          "type": "paragraph",
+          "content": "Opa, então, essa página faz algumas coisinhas, como por exemplo, você pode colocar comentários, dar likes, e se quiser que o comentário fique a sua cara, também possível trocar as informações no formulário ao lado."
+        },
+        {
+          "type": "paragraph",
+          "content": "Esse Projeto está relativamente finalizado, no futuro eu talvez tente integrar ele em algum Backend porém se você está lendo isso significa que ainda não fiz isso."
+        },
+        {
+          "type": "paragraph",
+          "content": "Você muito provavelmente veio de lá, mas se não veio e quiser da uma olhadinha em outros projetos você pode dar uma olhadinha no meu perfil no link abaixo 👇"
+        },
+
+        {
+          "type": "link",
+          "url": "https://github.com/WandersonFeitosa",
+          "content": "https://github.com/WandersonFeitosa"
+        }
+      ],
+      "publishedAt": "2022-11-11 18:00",
+      "comments": [
+        {
+          "id": "1806e842-cbb8-4b12-a4ae-7703225d09b5",
+          "content": "Post muito bom 👌👌",
+          "likes": 6,
+          "nameUser": "Diego Fernandes",
+          "githubUser": "diego3g",
+          "date": "2022-11-11 20:00"
+        },
+        {
+          "id": "25d25c26-bcb5-4219-a51d-faa3172d6567",
+          "content": "Post muito legal 😁",
+          "likes": 7,
+          "nameUser": "Wanderson Feitosa",
+          "githubUser": "WandersonFeitosa",
+          "date": "2022-11-11 22:00"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "author": {
+        "githubUser": "diego3g",
+        "name": "Diego Fernandes",
+        "role": "Web Developer"
+      },
+      "content": [
+        {
+          "type": "paragraph",
+          "content": "Fala galeraa 👋"
+        },
+        {
+          "type": "paragraph",
+          "content": "Esse Projeto está relativamente finalizado, no futuro eu talvez tente integrar ele em algum Backend porém se você está lendo isso significa que ainda não fiz isso."
+        },
+        {
+          "type": "link",
+          "url": "https://github.com/WandersonFeitosa",
+          "content": "github.com/WandersonFeitosa"
+        }
+      ],
+      "publishedAt": "2022-11-05 18:00",
+      "comments": [
+        {
+          "id": "84dfc390-f0ce-4889-876f-821933625ae8",
+          "content": "Post muito maneiro 👏",
+          "likes": 6,
+          "nameUser": "Wanderson Feitosa",
+          "githubUser": "WandersonFeitosa",
+          "date": "2022-11-07 22:00"
+        },
+        {
+          "id": "25d25c26-bcb5-4219-a51d-faa3172d6567",
+          "content": "Post muito divertido ✌",
+          "likes": 7,
+          "nameUser": "Diego Fernandes",
+          "githubUser": "diego3g",
+          "date": "2022-11-06 22:00"
+        }
+      ]
+    }
+  ]
+}
