@@ -1,9 +1,10 @@
 import styles from "./Header.module.css";
+import logo from "../assets/img/ignite-logo.svg";
 
 export function Header() {
   return (
     <header className={styles.header}>
-      <img src="./src/assets/img/ignite-logo.svg" alt="Logo" />
+      <img src={logo} alt="Logo" />
     </header>
   );
 }
