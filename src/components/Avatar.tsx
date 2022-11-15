@@ -1,6 +1,10 @@
 import styles from "./Avatar.module.css";
 
-export function Avatar({ hasBorder = true, githubUser }) {
+interface AvatarProps {
+  hasBorder?: boolean;
+  githubUser: string;
+}
+export function Avatar({ hasBorder = true, githubUser }: AvatarProps) {
   const githubUrl = "https://github.com/" + githubUser + ".png";
   return (
     <img

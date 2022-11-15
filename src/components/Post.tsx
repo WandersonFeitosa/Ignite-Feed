@@ -5,9 +5,42 @@ import { v4 as uuidv4 } from "uuid";
 import styles from "./Post.module.css";
 import { Comment } from "./Comment";
 import { Avatar } from "./Avatar";
-import { useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
+import { User } from "../App";
 
-export function Post({ author, publishedAt, content, commentsInfo, user }) {
+interface PostProps {
+  publishedAt: Date;
+  author: Author;
+  content: Content[];
+  commentsInfo: CommentsInfo[];
+  user: User;
+}
+interface Author {
+  githubUser: string;
+  name: string;
+  role: string;
+}
+interface Content {
+  type: string;
+  content: string;
+  url?: string;
+}
+export interface CommentsInfo {
+  id: string;
+  content: string;
+  likes: number;
+  nameUser: string;
+  githubUser: string;
+  date: string;
+}
+
+export function Post({
+  author,
+  publishedAt,
+  content,
+  commentsInfo,
+  user,
+}: PostProps) {
   const publishedDateFormated = format(
     publishedAt,
     "d 'de' LLLL 'às' HH:mm'h'",
@@ -25,18 +58,18 @@ export function Post({ author, publishedAt, content, commentsInfo, user }) {
 
   const [newCommentText, setNewCommentText] = useState("");
 
-  function handleNewCommentChange() {
+  function handleNewCommentChange(event: ChangeEvent<HTMLTextAreaElement>) {
     event.target.setCustomValidity("");
     setNewCommentText(event.target.value);
   }
 
-  function handleCreateNewComment() {
+  function handleCreateNewComment(event: any) {
     event.preventDefault();
     const actualDate = new Date().toISOString();
     console.log(actualDate);
     const newID = uuidv4();
     const formContent = event.target.comment.value;
-    const newCommentInfo = {
+    const newCommentInfo: CommentsInfo = {
       id: newID,
       content: formContent,
       likes: 0,
@@ -49,7 +82,7 @@ export function Post({ author, publishedAt, content, commentsInfo, user }) {
     setNewCommentText("");
   }
 
-  function deleteComment(commentToDelete) {
+  function deleteComment(commentToDelete: string) {
     const commentsWithouDeletedOne = comments.filter((comment) => {
       return comment.id != commentToDelete;
     });

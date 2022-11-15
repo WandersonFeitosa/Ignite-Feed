@@ -1,11 +1,17 @@
 import { PencilLine } from "phosphor-react";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import { Avatar } from "./Avatar";
 
 import styles from "./Sidebar.module.css";
 
-export function Sidebar({ name, role, githubUser, updateUser }) {
-  function handleuptadeUser() {
+interface SidebarProps {
+  name: string;
+  role: string;
+  githubUser: string;
+  updateUser: Function;
+}
+export function Sidebar({ name, role, githubUser, updateUser }: SidebarProps) {
+  function handleuptadeUser(event: any) {
     event.preventDefault();
     const form = event.target;
     const newUser = {

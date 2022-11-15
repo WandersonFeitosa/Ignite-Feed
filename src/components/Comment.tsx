@@ -4,8 +4,14 @@ import { ThumbsUp, Trash } from "phosphor-react";
 import { useState } from "react";
 import { Avatar } from "./Avatar";
 import styles from "./Comment.module.css";
+import { CommentsInfo } from "./Post";
 
-export function Comment({ comentInfo, onDeleteComment }) {
+interface CommentProps {
+  comentInfo: CommentsInfo;
+  onDeleteComment: (comment: string) => void;
+}
+
+export function Comment({ comentInfo, onDeleteComment }: CommentProps) {
   const likesAmmount = comentInfo.likes;
   const [likeCount, setLikeCount] = useState(likesAmmount);
   const [liked, setLiked] = useState(false);
@@ -17,7 +23,7 @@ export function Comment({ comentInfo, onDeleteComment }) {
     setLikeCount(likeCount + 1);
     setLiked(true);
   }
-  const publishedAt = new Date(comentInfo.date); 
+  const publishedAt = new Date(comentInfo.date);
   const publishedDateFormated = format(
     publishedAt,
     "d 'de' LLLL 'às' HH:mm'h'",

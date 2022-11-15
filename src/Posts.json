@@ -1,7 +1,7 @@
 {
   "posts": [
     {
-      "id": 1,
+      "id": "1",
       "author": {
         "githubUser": "WandersonFeitosa",
         "name": "Wanderson Feitosa",
@@ -52,7 +52,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": "2",
       "author": {
         "githubUser": "diego3g",
         "name": "Diego Fernandes",

@@ -8,14 +8,22 @@ import postsInfo from "./Posts.json";
 import userInfo from "./User.json";
 import { useState } from "react";
 
-const user = userInfo.user;
+export interface User {
+  name: string;
+  role: string;
+  githubUser: string;
+}
+
+
+const user: User = userInfo.user;
 
 const posts = postsInfo.posts;
 
 function App() {
+
   const [newUser, setNewUser] = useState(user);
 
-  function updateUser(newUser) {
+  function updateUser(newUser: User) {
     setNewUser(newUser);
   }
 
